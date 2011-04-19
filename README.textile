@@ -1,0 +1,15 @@
+h1. TextMate GitHub textile preview
+
+This is a replacement for the normal "TextMate":http://macromates.com/ Textile bundle "Preview" command. It adds a "RedCloth":http://redcloth.org/ extension to parse the custom GitHub markup for Wiki links and code blocks. Like this:
+
+[[A wiki link]]
+
+``` some language
+Some code goes here
+```
+
+To use it, replace (or make a new version of) the Preview command at *Bundles -> Bundle Editor -> Show Bundle Editor -> Textile*
+
+Even better, if this file is kept as a separate executable, it can be used for a "live" preview via the *Window -> Show Web Preview* command.
+
+This pairs nicely with a "custom TextMate theme":http://fgnass.posterous.com/github-markdown-preview by @fgnass@ that applies the GitHub CSS rules.
