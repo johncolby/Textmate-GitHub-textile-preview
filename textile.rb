@@ -11,7 +11,7 @@ require "#{ENV['TM_SUPPORT_PATH']}/lib/tm/htmloutput"
 ##########
 module RedClothGithubExtension
   
-  CODE_RE = /```.+?\n([^`]+)\n```/m
+  CODE_RE = /```([^\n]*)\n([^`]+)\n```/m
   LINK_RE = /([@_]{0,2})  # Opening formatting
             (\[\[)        # Start link
             ([^\|\]]+)    # Link text
@@ -23,7 +23,7 @@ module RedClothGithubExtension
   def refs_github(text)
      # Custom code blocks
     text.gsub!(CODE_RE) do |m|
-      code_str = $1
+      code_str = $2
       "<pre><code>#{ code_str }</code></pre>"
     end
     
